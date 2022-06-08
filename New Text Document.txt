@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class MinimumElement {
+
+    private static int readInteger(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("How many elements?: ");
+        int num = scanner.nextInt();
+        
+        return num;
+    }
+
+    private static int [] readElements(int num){
+        int numbers [] = new int [num];
+        int i = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        while(i < num){
+            numbers[i] = scanner.nextInt();
+            scanner.nextLine();
+            i++;
+        }
+        return numbers;
+    }
+
+    private static int findMin(int [] numbers){
+        int min = numbers[0];
+
+        for (int num : numbers) {
+            if (num < min){
+                System.out.println(num);
+                min = num;
+            }
+        }
+        return min;
+    }
+}
