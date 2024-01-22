@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: Reactive TODO
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/todo
+    username: postgres
+    password: f1234F
+  data:
+    r2dbc:
+      repositories:
+        enabled: true

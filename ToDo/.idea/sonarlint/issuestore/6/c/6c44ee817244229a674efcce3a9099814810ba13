@@ -1,0 +1,4 @@
+
+w	java:S116"VRename this field "CreatedDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¸À‘üÿÿÿÿ8Šµú€Ó1
+n
+java:S1128"LRemove this unused import 'org.springframework.data.annotation.CreatedDate'.(Éå¥°ÿÿÿÿÿ8µú€Ó1
