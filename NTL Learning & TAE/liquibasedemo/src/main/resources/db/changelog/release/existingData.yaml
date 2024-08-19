@@ -1,0 +1,84 @@
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: faiaz (generated)
+    changes:
+    - createTable:
+        tableName: employee
+- changeSet:
+    id: 2
+    author: faiaz (generated)
+    changes:
+    - insert:
+        columns:
+        - column:
+            name: id
+            valueNumeric: 1
+        - column:
+            name: department
+            value: Engineering
+        - column:
+            name: email
+            value: jesse.pinkman@example.com
+        - column:
+            name: first_name
+            value: Jesse
+        - column:
+            name: job_title
+            value: Software Engineer
+        - column:
+            name: last_name
+            value: Pinkman
+        - column:
+            name: salary
+            value: '80000'
+        tableName: employee
+    - insert:
+        columns:
+        - column:
+            name: id
+            valueNumeric: 2
+        - column:
+            name: department
+            value: Engineering
+        - column:
+            name: email
+            value: doc.strange@example.com
+        - column:
+            name: first_name
+            value: Doc
+        - column:
+            name: job_title
+            value: Software Engineer
+        - column:
+            name: last_name
+            value: Strange
+        - column:
+            name: salary
+            value: '80000'
+        tableName: employee
+    - insert:
+        columns:
+        - column:
+            name: id
+            valueNumeric: 3
+        - column:
+            name: department
+            value: Engineering
+        - column:
+            name: email
+            value: john.doe@example.com
+        - column:
+            name: first_name
+            value: John
+        - column:
+            name: job_title
+            value: Software Engineer
+        - column:
+            name: last_name
+            value: Doe
+        - column:
+            name: salary
+            value: '200000'
+        tableName: employee
+

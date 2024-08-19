@@ -58,6 +58,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.liquibase.ext</groupId>
+			<artifactId>liquibase-hibernate6</artifactId>
+			<version>4.29.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -67,7 +72,9 @@
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>4.29.0</version>
 				<configuration>
-					<propertyFile>src/main/resources/application.properties</propertyFile>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<diffChangeLogFile>src/main/resources/db/changelog/${maven.build.timestamp}_changelog.yaml</diffChangeLogFile>
+					<verbose>true</verbose>
 				</configuration>
 			</plugin>
 			<plugin>
