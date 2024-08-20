@@ -1,0 +1,40 @@
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: faiaz (generated)
+    preConditions:
+        - onFail: MARK_RAN
+          not:
+              tableExists:
+                  tableName: employee
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: employee_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: department
+            type: VARCHAR(255)
+        - column:
+            name: email
+            type: VARCHAR(255)
+        - column:
+            name: first_name
+            type: VARCHAR(255)
+        - column:
+            name: job_title
+            type: VARCHAR(255)
+        - column:
+            name: last_name
+            type: VARCHAR(255)
+        - column:
+            name: salary
+            type: VARCHAR(255)
+        tableName: employee
+

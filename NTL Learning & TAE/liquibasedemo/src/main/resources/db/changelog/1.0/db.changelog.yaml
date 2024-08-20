@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: schema/create_table_employee.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: data/employee_data.yaml
+      relativeToChangelogFile: true

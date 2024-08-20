@@ -3,12 +3,6 @@ databaseChangeLog:
     id: 1
     author: faiaz (generated)
     changes:
-    - createTable:
-        tableName: employee
-- changeSet:
-    id: 2
-    author: faiaz (generated)
-    changes:
     - insert:
         columns:
         - column:

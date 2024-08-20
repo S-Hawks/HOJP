@@ -73,7 +73,7 @@
 				<version>4.29.0</version>
 				<configuration>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
-					<diffChangeLogFile>src/main/resources/db/changelog/${maven.build.timestamp}_changelog.yaml</diffChangeLogFile>
+					<diffChangeLogFile>src/main/resources/db/changelog/1.0/schema/manual_changelog.yaml</diffChangeLogFile>
 					<verbose>true</verbose>
 				</configuration>
 			</plugin>

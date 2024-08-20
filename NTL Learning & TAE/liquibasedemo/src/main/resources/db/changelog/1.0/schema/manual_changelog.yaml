@@ -1,0 +1,9 @@
+databaseChangeLog:
+- changeSet:
+    id: 1724161259896-1
+    author: faiaz (generated)
+    changes:
+    - dropTable:
+        tableName: employee
+
+    liquibase --diffTypes="column,index,foreignkey,primarykey,sequence,table,view" --referenceUrl="jdbc:mysql://localhost:3306/my_database?user=myuser&password=mypassword" --url="jdbc:mysql://localhost:3306/my_database?user=myuser&password=mypassword" diff --outputChangeLogFile="src/main/resources/db/changelog/1.0/schema/2024-08-20T13:34:04Z_changelog.yaml"
