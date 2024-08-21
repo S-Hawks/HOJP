@@ -1,0 +1,25 @@
+1.This is a first class function...
+myFunction = public void doTask() {
+    System.out.println("Hello world")
+}
+
+2. No need to use excess modifier
+myFunction = void doTask(){
+    System.out.println("Hello World");
+}
+
+3. No need to use method name -> though there is a variable to refer the function so method name is don't make any seance
+myFunction = void (){
+    System.out.println("Hello World);
+}
+
+4. The return type is infrared, infrared by what's on the right hand side/ no need to use return type return type specify by left hand side
+
+myFunction = () {
+    System.out.println("Hello World");
+}
+
+5. Finally one minor modification a arrow that's makes it as a LAMBDA expression
+myFunction = () -> {
+    System.out.println("Hello World");
+}
