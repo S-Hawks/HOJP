@@ -1,0 +1,18 @@
+**Functional Interface**
+Java mainly enable backward compatibility so that they manage a way that refers
+previous concept of java.
+
+So Lambda expression refers mainly interface or spacial kind of interface
+that is known as Functional interface.
+"So A Lambda Expression type is a interface" which is Functional interface
+Characteristics of Functional interface
+1/ No special syntax/keyword for lambdas
+2/Can treat it just like any other interface
+3/ ....but a special sybtype
+4/ but with a rule
+---A functional interface need to have a Single Abstract Method(SAM)
+
+***
+Though Functional interface need to have a single abstract method,what happen
+if anyone add one extra method to it. to prevent this error we have method level annotation @FunctionalInterface
+it's shows error to add extra method which is a functional interface.

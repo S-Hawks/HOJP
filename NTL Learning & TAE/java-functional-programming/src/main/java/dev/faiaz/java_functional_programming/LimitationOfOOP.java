@@ -19,17 +19,20 @@ public class LimitationOfOOP {
 
     }
     public static void main(String[] args) {
-        Task task = new HelloWorld();
+//        Task task = new HelloWorld();
+        Task task = () -> System.out.println("Hello world");
         LimitationOfOOP.runner(task);
     }
 }
+
+@FunctionalInterface
 interface Task {
     void run();
 }
 
-class HelloWorld implements Task {
-    @Override
-    public void run() {
-        System.out.println("Hello World");
-    }
-}
+//class HelloWorld implements Task {
+//    @Override
+//    public void run() {
+//        System.out.println("Hello World");
+//    }
+//}

@@ -1,0 +1,15 @@
+Difference between Anonymous Class and Lambda
+Anonymous class mainly trigger Object creation basically when we use "new"
+it's call the constructor (basic way to create a class in java)
+
+Lambda trigger "invokedynamic" instruction
+**invokedynamic
+    -Called "indy"
+    -JVM opcode
+    -introduce in java 7
+    -meant to support dynamically typed language
+
+invokedynamic and lambdas
+    -Classes not created at compile time
+    -the bytecode manages this at runtime
+    -doesn't generate the class until the first invocation
