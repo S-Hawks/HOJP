@@ -1,0 +1,8 @@
+Method References
+-when the lambda expression is just calling another method
+-and doing nothing else
+-syntactic shortcut
+-avoid arg names
+
+eg: Supplier<Double> generateRandom = () -> Math.random(); -> Supplier<Double> generateRandom = () -> Math::random;
+

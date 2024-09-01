@@ -1,1 +1,47 @@
-So for using lambda we need to use
+So for using lambda we need to use interface
+in java there is some pre built interface that's are
+    -Function
+    -consumer
+    -supplier
+    -predicate
+So that we are no need to declare interface by ourselves.
+
+#Fucntion: Takes one arg and return one value
+#Consumer: Take one arg and return nothing
+#Supplier: Doesn't take any args, and returns something
+#Predicate: Takes in an arg and resolves it to true or false
+
+Whenever we have lambda that's take no input argument and no return type
+there is a perfect interface -> Runnable
+
+@FunctionalInterface
+public interface Runnable{
+    void run()
+}
+
+Function Arity: Number of input arguments a function accepts.
+That's why we have
+    -BiFunction: Takes 2 input arg and return one value
+    -BiConsumer: take 2 argument and concatenate it
+    -BiSupplier:Take one argument and return something
+
+Mainly adding by give this functional interface to take one extra argument. other mechanism are same.
+
+What if we need 3 input arguments ? ......
+
+
+
+
+We have another concept Operator
+I a function have same input and same output we can use operator Functional interface
+UnaryOperator<Integer> increment = x -> x + 1;
+BinaryOperator<String> concat = (a, b) -> a.concat(b);
+
+***BinaryOperator is a shortcut of BiFunction
+@FunctionalInterface
+interface BinaryOperator<T> extends BiFunction<T,T,T> {
+    //...
+}
+eg:
+BinaryOperator<String> operatorConcat = (a,b) -> a.concat(b);
+BiFunction<String,String,String> functionConcat = (a, b) -> a.concat(b);
