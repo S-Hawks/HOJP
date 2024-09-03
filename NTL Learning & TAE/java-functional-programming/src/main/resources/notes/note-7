@@ -3,3 +3,10 @@
 2. Functions as first class entities
 3. composable functions
 4. Different techniques
+
+//There is a concept called composability with AndThen and compose
+
+..and then mainly use when we chaining function (int lambda calling lambda we pass one lambda to another lambda)
+we can acheive the same thing with AndThen
+##Example shows in ComposableFunction.java class
+
