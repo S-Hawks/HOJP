@@ -10,6 +10,7 @@ public class ScopesProblem {
         return increment.apply(count);
     }
     public static void main(String[] args) {
+        //This is a empty message...
 
 
     }
