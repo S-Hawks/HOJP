@@ -4,14 +4,14 @@ import java.util.function.Function;
 
 public class ScopesProblem {
 
-    public static int counter() {
+    public static Function<Integer, Integer> counter() {
         int count = 0;
         Function<Integer, Integer> increment = x -> count + 1;
-        return increment.apply(count);
+        return increment;
     }
     public static void main(String[] args) {
-        //This is a empty message...
-
-
+        Function<Integer, Integer> counter = ScopesProblem.counter();
+        System.out.println(counter.apply(0));
+        System.out.println(counter.apply(0));
     }
 }

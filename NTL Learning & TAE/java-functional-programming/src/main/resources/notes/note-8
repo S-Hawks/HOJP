@@ -1,0 +1,9 @@
+//Stream (single use declarative sequential data pipelines with lazy execution)
+Stream are different way of dealing with collection
+or another design pattern of processing the element in collection
+
+Why Stream API
+* Alternative approach to "process" a collection
+* declarative approach (instruct a program on what needs to done, instead of telling it how to do it)
+* lazy evaluation
+* utilize functional programming

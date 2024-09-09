@@ -7,6 +7,41 @@
 //There is a concept called composability with AndThen and compose
 
 ..and then mainly use when we chaining function (int lambda calling lambda we pass one lambda to another lambda)
-we can acheive the same thing with AndThen
+we can achieve the same thing with AndThen
 ##Example shows in ComposableFunction.java class
+
+
+// Closures
+1. lambdas can access variables in scope
+2. but run in completely different scope
+3. what happens to the variables?
+4. Java remembers and "locks " the values
+5. The value is used when the lambda runs
+
+
+//Pure Function
+
+In functional programming if there is no external variable and there in no
+random output then it's call ca pure function...
+eg ->
+    *** 1 ***
+    count = 0;
+    Function<Integer, Integer> counter = x -> count + 1;
+
+    Function<Integer, Integer> random = Math::random();
+
+    *** These are not pure function ***
+
+    *** 2 ***
+
+    Function<Integer, Integer> counter = x -> count + 1
+
+    *** This is the example fo pure function ***
+
+Why prefer pure function
+* easier to understand
+* easier to reason with
+* easier to debug
+* easier to test
+
 
