@@ -7,3 +7,44 @@ Why Stream API
 * declarative approach (instruct a program on what needs to done, instead of telling it how to do it)
 * lazy evaluation
 * utilize functional programming
+
+
+//Basically when stream is created there is bunch of extra apis is introduce
+eg. Files.line(Paths.get("somePath")) is basically a streams
+
+//There are 3 key elements in stream api
+ 1.stream
+ 2.intermediate operation
+ 3.terminal operation(what's ends the stream)
+
+
+//Stream
+1. A sequence of elements from source
+2.can be processed in parallel and sequentially
+
+//Intermediate operation
+1.Operations applied to every element of a stream (the worker analogy)
+2.transform a stream into another stream
+
+//Terminal operations
+1.operations that end (and start!) the stream
+2.produce a final result or a side effect
+3.the main "point" of the whole operation
+
+
+//Those operator which return Stream after processing they can be called intermediate operator
+    1.limit
+    2.filter
+    3.map
+    4.peek
+    5.distinct
+    6.sorted (1.doesn't immediately sort the elements in the stream, 2. Marks the streams as "to be sorted", 3. actual sorting is deferred until a terminal operation)
+
+they are all intermediate operator
+
+//those who does not return stream in stream operation they can be denoted as final/terminal operator
+    1.foreach
+    2.toList
+
+
+*** Things to remember without terminal operator Stream don't even work

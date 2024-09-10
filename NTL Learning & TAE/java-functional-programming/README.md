@@ -1,0 +1,9 @@
+Hello
+world
+this
+is 
+readme
+file
+to
+check 
+stream
