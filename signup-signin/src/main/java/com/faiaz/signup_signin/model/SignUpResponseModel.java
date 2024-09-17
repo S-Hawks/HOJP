@@ -1,4 +1,9 @@
 package com.faiaz.signup_signin.model;
 
-public class SignUpResponseModel {
-}
+
+public record SignUpResponseModel(
+        String userId,
+        String firstName,
+        String lastName,
+        String email
+) {}
