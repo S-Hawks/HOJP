@@ -7,6 +7,7 @@ import com.faiaz.signup_signin.utils.UserEndpointUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +18,13 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping(value = UserEndpointUtil.signup, consumes = "application/json")
+    @PostMapping(value = UserEndpointUtil.SIGNUP, consumes = "application/json")
     public ResponseEntity<SignUpResponseModel> createUser(@RequestBody SignUpRequestModel signUpRequestModel) {
         return new ResponseEntity<>(userService.createUser(signUpRequestModel), HttpStatus.OK);
+    }
+
+    @GetMapping(value = UserEndpointUtil.GET_USER)
+    public String getUser() {
+        return "get user was called";
     }
 }

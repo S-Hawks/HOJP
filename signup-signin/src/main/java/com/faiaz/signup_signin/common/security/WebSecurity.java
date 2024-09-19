@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -44,16 +45,18 @@ public class WebSecurity {
 
         // Customize Login URL path
         AuthenticationFilter authenticationFilter = new AuthenticationFilter(authenticationManager);
-        authenticationFilter.setFilterProcessesUrl(UserEndpointUtil.login);
+        authenticationFilter.setFilterProcessesUrl(UserEndpointUtil.LOGIN);
 
         http
                 .csrf(AbstractHttpConfigurer::disable)  // Cleaner way to disable CSRF
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers(HttpMethod.POST, UserEndpointUtil.signup).permitAll()  // Allow POST to signup endpoint
+                        .requestMatchers(HttpMethod.POST, UserEndpointUtil.SIGNUP).permitAll()  // Allow POST to signup endpoint
                         .anyRequest().authenticated())
                 .authenticationManager(authenticationManager) //Here we need to define .authenticationManager because we create custom authenticationManager that's why we pass it to security
 //                .addFilter(new AuthenticationFilter(authenticationManager)); //We are registering newly created AuthenticationManagerFilter to Security Object
-                .addFilter(authenticationFilter); // If we don't use custom url then uncomment previous line and remove this line.
+                .addFilter(authenticationFilter) // If we don't use custom url then uncomment previous line and remove this line.
+                .addFilter(new AuthorizationFilter(authenticationManager))
+                .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();
     }
 

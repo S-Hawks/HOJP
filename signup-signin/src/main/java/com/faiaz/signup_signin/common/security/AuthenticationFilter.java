@@ -62,8 +62,8 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         but we need userId which we can get from userService which is a spring bean. if this class is declared as Bean we can autowire "userService" and can get user easily.
         though "ApplicationFilter" Class is not a bean we can get userService By adding a helper class in my case the helper class is "SpringApplicationContext"
         POV: if class name is "UserServiceImpl" then the beanName need to be passed like "userServiceImpl" -> follow the code for better understanding
-        ---> go to application context to learn more <---
 
+        ---> go to application context to learn more <---
         * */
         UserService userService = (UserService) SpringApplicationContext.getBean("userServiceImpl");
         UserEntity user = userService.getUser(userName);
